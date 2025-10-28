@@ -3,8 +3,7 @@ from pathlib import Path
 
 
 def get_repo_path():
-    current_path = Path(os.path.abspath('.'))
-    path = current_path / Path(__file__)
+    path = Path(os.path.abspath('.'))  # Take the current directory
 
     # Find .git folder in superdirectory
     while not os.path.exists(path / '.git'):
